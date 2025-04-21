@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Menu, Home, Info, Contact, Settings } from 'lucide-react';
+import { Menu, Home, Info, Settings, Contact } from 'lucide-react';
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 
 const mobileMenuItems = [
@@ -50,6 +50,7 @@ const NavBar = () => {
                       </li>
                     </ul>
                   </div>
+                  {/* Drawer footer */}
                   <div className="border-t border-gray-200 px-4 py-4 text-xs text-gray-500 bg-gray-50 mt-auto">
                     © PSRWS. All rights reserved.
                   </div>
@@ -57,11 +58,8 @@ const NavBar = () => {
               </SheetContent>
             </Sheet>
           </div>
+          {/* Brand name/text, no logo/image */}
           <div className="flex items-center">
-            <div className="text-blue-600 w-8 h-8 mr-1">
-              {/* Removed SVG/image logo for a text logo */}
-              <span className="font-bold text-xl">P</span>
-            </div>
             <h1 className="text-blue-600 font-bold text-xl">PSRWS</h1>
             <p className="hidden md:block text-xs ml-1 text-gray-500">foundation</p>
           </div>
