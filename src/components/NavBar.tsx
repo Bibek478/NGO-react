@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Menu, Home, Info, Settings, Mail, FileText, UserPlus, Heart } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
@@ -16,7 +15,7 @@ const NavBar = () => {
   const location = useLocation();
   return (
     <nav className="bg-white shadow-sm w-full fixed top-0 left-0 z-50">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center h-24">
         <div className="flex items-center">
           <div className="md:hidden mr-2">
             <Sheet>
@@ -61,24 +60,26 @@ const NavBar = () => {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="flex items-center justify-center w-24 h-8 mr-2">
-            {/* Space for logo, intentionally left blank */}
+          <div className="flex items-center py-2">
+            <img
+              src="/assets/NGO-logo.svg"
+              alt="PSRWS Foundation Logo"
+              className="w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto object-contain"
+            />
           </div>
-          <h1 className="text-blue-600 font-bold text-xl">PSRWS</h1>
-          <p className="hidden md:block text-xs ml-1 text-gray-500">foundation</p>
         </div>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-3 lg:space-x-6 text-sm lg:text-base">
           <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Home</Link>
           <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-medium" : "text-gray-600"}`}>About</Link>
           <Link to="/projects" className={`hover:text-blue-600 ${location.pathname === "/projects" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Projects</Link>
-          <Link to="/news" className={`hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-medium" : "text-gray-600"}`}>News & Publication</Link>
+          <Link to="/news" className={`whitespace-nowrap hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-medium" : "text-gray-600"}`}>News & Publication</Link>
           <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Contact</Link>
         </div>
-        <div className="hidden md:flex space-x-3">
-          <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
+        <div className="hidden md:flex space-x-2 lg:space-x-3">
+          <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap">
             Join us
           </Link>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap">
             Donate Now
           </button>
         </div>

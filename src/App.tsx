@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -23,9 +22,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <div className="min-h-screen bg-white">
-        <NavBar />
-        <div className="pt-20"> {/* Space for fixed navbar */}
-          <BrowserRouter>
+        <BrowserRouter>
+          <NavBar />
+          <div className="pt-20">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
@@ -35,9 +34,9 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </div>
-        <Footer />
+          </div>
+          <Footer />
+        </BrowserRouter>
       </div>
     </TooltipProvider>
   </QueryClientProvider>

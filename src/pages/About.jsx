@@ -1,10 +1,9 @@
-
 import React from "react";
 
 export default function About() {
   return (
-    <div className="bg-gray-50 min-h-screen pb-12 pt-8">
-      <div className="pt-24 pb-8 bg-blue-50">
+    <div className="bg-gray-50 min-h-screen pb-12">
+      <div className="pt-20 pb-8 bg-blue-50"> {/* Updated pt-24 to pt-20 */}
         <div className="container mx-auto px-4 text-center">
           <div className="w-full h-12 mb-6 flex items-center justify-center">
             {/* Empty space for logo */}

@@ -4,17 +4,17 @@ import TeamMember from './TeamMember';
 const TeamSection = () => {
   const team = [
     {
-      image: "/lovable-uploads/b3526753-d2e2-4304-b28f-80bcfe44b1ab.png",
+      image: "/assets/president.jpg",
       name: "Arup Ratan Roy",
       role: "President"
     },
     {
-      image: "/lovable-uploads/b3526753-d2e2-4304-b28f-80bcfe44b1ab.png",
+      image: "/assets/secretaey.jpg",
       name: "Prasenjit Chakraborty",
       role: "Secretary"
     },
     {
-      image: "/lovable-uploads/b3526753-d2e2-4304-b28f-80bcfe44b1ab.png",
+      image: "/assets/T.jpg",
       name: "Soma Das",
       role: "Treasurer"
     }
