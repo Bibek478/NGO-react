@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Menu, Home, Info, Settings, Contact, News, Join, Donate } from "lucide-react";
+import { Menu, Home, Info, Settings, Mail, FileText, UserPlus, Heart } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
 
@@ -8,8 +8,8 @@ const mobileMenuItems = [
   { name: "Home", to: "/", icon: Home },
   { name: "About", to: "/about", icon: Info },
   { name: "Projects", to: "/projects", icon: Settings },
-  { name: "News & Publication", to: "/news", icon: News },
-  { name: "Contact", to: "/contact", icon: Contact },
+  { name: "News & Publication", to: "/news", icon: FileText },
+  { name: "Contact", to: "/contact", icon: Mail },
 ];
 
 const NavBar = () => {
@@ -44,11 +44,11 @@ const NavBar = () => {
                       ))}
                       <li className="mt-3 flex space-x-2 px-2">
                         <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
-                          <Join size={16} className="mr-2" />
+                          <UserPlus size={16} className="mr-2" />
                           Join us
                         </Link>
                         <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
-                          <Donate size={16} className="mr-2" />
+                          <Heart size={16} className="mr-2" />
                           Donate Now
                         </button>
                       </li>
