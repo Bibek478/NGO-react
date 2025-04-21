@@ -1,50 +1,54 @@
 
-import { useState } from 'react';
-import { Menu, Home, Info, Settings, Contact } from 'lucide-react';
+import React from "react";
+import { Menu, Home, Info, Settings, Contact, News, Join, Donate } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Link, useLocation } from "react-router-dom";
 
 const mobileMenuItems = [
-  { name: "Home", href: "#", icon: Home },
-  { name: "About", href: "#about", icon: Info },
-  { name: "Projects", href: "#projects", icon: Settings },
-  { name: "News & Publication", href: "#news", icon: Info },
-  { name: "Contact", href: "#contact", icon: Contact },
+  { name: "Home", to: "/", icon: Home },
+  { name: "About", to: "/about", icon: Info },
+  { name: "Projects", to: "/projects", icon: Settings },
+  { name: "News & Publication", to: "/news", icon: News },
+  { name: "Contact", to: "/contact", icon: Contact },
 ];
 
 const NavBar = () => {
+  const location = useLocation();
   return (
     <nav className="bg-white shadow-sm w-full">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Hamburger menu: visible only on mobile, on the left */}
         <div className="flex items-center">
           <div className="md:hidden mr-2">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-gray-600">
+                <button className="text-gray-600" aria-label="Open menu">
                   <Menu size={24} />
-                  <span className="sr-only">Open menu</span>
                 </button>
               </SheetTrigger>
-              <SheetContent side="left" className="max-w-xs w-64 p-0">
+              <SheetContent side="left" className="max-w-xs w-64 p-0 flex flex-col">
                 <nav className="flex flex-col h-full">
                   <div className="flex-1 overflow-auto">
                     <ul className="py-6 px-2 space-y-2">
                       {mobileMenuItems.map((item) => (
                         <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className="flex items-center py-3 px-4 rounded hover:bg-blue-50 transition-colors text-gray-700"
+                          <Link
+                            to={item.to}
+                            className={`flex items-center py-3 px-4 rounded hover:bg-blue-50 transition-colors text-gray-700 ${
+                              location.pathname === item.to ? "text-blue-600 font-semibold" : ""
+                            }`}
                           >
                             <item.icon className="mr-3 text-blue-500" size={20} />
                             <span>{item.name}</span>
-                          </a>
+                          </Link>
                         </li>
                       ))}
                       <li className="mt-3 flex space-x-2 px-2">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm w-full">
+                        <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
+                          <Join size={16} className="mr-2" />
                           Join us
-                        </button>
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full">
+                        </Link>
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
+                          <Donate size={16} className="mr-2" />
                           Donate Now
                         </button>
                       </li>
@@ -58,28 +62,27 @@ const NavBar = () => {
               </SheetContent>
             </Sheet>
           </div>
-          {/* Brand name/text, no logo/image */}
-          <div className="flex items-center">
-            <h1 className="text-blue-600 font-bold text-xl">PSRWS</h1>
-            <p className="hidden md:block text-xs ml-1 text-gray-500">foundation</p>
+          {/* Brand Name Only (No logo/image, but leave space if needed) */}
+          <div className="flex items-center justify-center w-24 h-8 mr-2">
+            {/* Empty space for logo, intentionally left blank */}
           </div>
+          <h1 className="text-blue-600 font-bold text-xl">PSRWS</h1>
+          <p className="hidden md:block text-xs ml-1 text-gray-500">foundation</p>
         </div>
-
         {/* Desktop links */}
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="text-blue-600 font-medium">Home</a>
-          <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
-          <a href="#projects" className="text-gray-600 hover:text-blue-600">Projects</a>
-          <a href="#news" className="text-gray-600 hover:text-blue-600">News & Publication</a>
-          <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
+          <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Home</Link>
+          <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-medium" : "text-gray-600"}`}>About</Link>
+          <Link to="/projects" className={`hover:text-blue-600 ${location.pathname === "/projects" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Projects</Link>
+          <Link to="/news" className={`hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-medium" : "text-gray-600"}`}>News & Publication</Link>
+          <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Contact</Link>
         </div>
-
         {/* Desktop CTAs */}
         <div className="hidden md:flex space-x-3">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+          <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
             Join us
-          </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+          </Link>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center">
             Donate Now
           </button>
         </div>
