@@ -3,11 +3,11 @@ import React from "react";
 
 export default function News() {
   return (
-    <div className="bg-gray-50 min-h-screen pb-12">
-      <div className="pt-16 pb-8 bg-blue-50">
+    <div className="bg-gray-50 min-h-screen pb-12 pt-8">
+      <div className="pt-24 pb-8 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
           <div className="w-full h-12 mb-6 flex items-center justify-center">
-            {/* News header image/space */}
+            {/* Empty news header image/space */}
           </div>
           <h1 className="text-4xl font-bold text-gray-700 mb-2">News & Publication</h1>
           <p className="text-gray-600 mb-4">Stay updated with our latest articles and announcements.</p>

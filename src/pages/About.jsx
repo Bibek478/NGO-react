@@ -3,11 +3,11 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="bg-gray-50 min-h-screen pb-12">
-      <div className="pt-16 pb-8 bg-blue-50">
+    <div className="bg-gray-50 min-h-screen pb-12 pt-8">
+      <div className="pt-24 pb-8 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
           <div className="w-full h-12 mb-6 flex items-center justify-center">
-            {/* Logo/brand space intentionally left blank */}
+            {/* Empty space for logo */}
           </div>
           <h1 className="text-4xl font-bold text-gray-700 mb-2">About Our NGO</h1>
           <p className="text-gray-600 mb-4">Learn more about our mission, vision, and the team behind our work.</p>

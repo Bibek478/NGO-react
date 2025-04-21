@@ -3,11 +3,11 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="bg-gray-50 min-h-screen pb-12">
-      <div className="pt-16 pb-8 bg-blue-50">
+    <div className="bg-gray-50 min-h-screen pb-12 pt-8">
+      <div className="pt-24 pb-8 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
           <div className="w-full h-12 mb-6 flex items-center justify-center">
-            {/* Logo/space for branding */}
+            {/* Empty logo/space for branding */}
           </div>
           <h1 className="text-4xl font-bold text-gray-700 mb-2">Get In Touch</h1>
           <p className="text-gray-600 mb-4">We'd love to hear from you! Reach out with questions, feedback, or partnership inquiries.</p>
@@ -22,7 +22,7 @@ export default function Contact() {
             <p className="mb-2"><span className="font-semibold">Phone:</span> <a href="tel:+919932238011" className="text-blue-600 underline">+91 99322 38011</a></p>
             <p className="mb-4"><span className="font-semibold">Email:</span> <a href="mailto:psrwsphd@gmail.com" className="text-blue-600 underline">psrwsphd@gmail.com</a></p>
             <div className="w-full h-48 bg-gray-100 flex items-center justify-center rounded">
-              {/* Map placeholder */}
+              {/* Empty map placeholder */}
             </div>
           </div>
           {/* Contact Form */}

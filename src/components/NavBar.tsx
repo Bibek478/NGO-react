@@ -15,7 +15,7 @@ const mobileMenuItems = [
 const NavBar = () => {
   const location = useLocation();
   return (
-    <nav className="bg-white shadow-sm w-full">
+    <nav className="bg-white shadow-sm w-full fixed top-0 left-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
           <div className="md:hidden mr-2">
@@ -54,7 +54,6 @@ const NavBar = () => {
                       </li>
                     </ul>
                   </div>
-                  {/* Drawer footer */}
                   <div className="border-t border-gray-200 px-4 py-4 text-xs text-gray-500 bg-gray-50 mt-auto">
                     © PSRWS. All rights reserved.
                   </div>
@@ -62,14 +61,12 @@ const NavBar = () => {
               </SheetContent>
             </Sheet>
           </div>
-          {/* Brand Name Only (No logo/image, but leave space if needed) */}
           <div className="flex items-center justify-center w-24 h-8 mr-2">
-            {/* Empty space for logo, intentionally left blank */}
+            {/* Space for logo, intentionally left blank */}
           </div>
           <h1 className="text-blue-600 font-bold text-xl">PSRWS</h1>
           <p className="hidden md:block text-xs ml-1 text-gray-500">foundation</p>
         </div>
-        {/* Desktop links */}
         <div className="hidden md:flex space-x-6">
           <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Home</Link>
           <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-medium" : "text-gray-600"}`}>About</Link>
@@ -77,7 +74,6 @@ const NavBar = () => {
           <Link to="/news" className={`hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-medium" : "text-gray-600"}`}>News & Publication</Link>
           <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Contact</Link>
         </div>
-        {/* Desktop CTAs */}
         <div className="hidden md:flex space-x-3">
           <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
             Join us
