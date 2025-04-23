@@ -13,7 +13,7 @@ export default function News() {
           <p className="text-gray-600 mb-4">Stay updated with our latest articles and announcements.</p>
         </div>
       </div>
-      <div className="container mx-auto px-4 mt-8">
+      {/* <div className="container mx-auto px-4 mt-8">
         <div className="space-y-8">
           <div className="bg-white rounded-lg shadow p-6">
             <h2 className="text-lg font-bold text-blue-600 mb-1">Success in Swachh Bharat Mission</h2>
@@ -26,7 +26,7 @@ export default function News() {
             <p className="text-gray-700">Transforming rural sanitation through community engagement and sustainable waste management practices across multiple blocks.</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
