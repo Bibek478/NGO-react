@@ -1,15 +1,16 @@
 import ArticleCard from './ArticleCard';
+import { Link } from 'react-router-dom';
 
-const ArticlesSection = () => {
+const ArticlesSection = () => {  
   const articles = [
     {
-      image: "/public/assets/SBM.jpg",
+      image: "/assets/SBM.jpg",
       date: "October 24, 2023",
       title: "Success in Swachh Bharat Mission",
       excerpt: "PSRWS's successful involvement in rural household toilet construction and sanitation awareness under Swachh Bharat Mission in Phandeshwar Block."
     },
     {
-      image: "/public/assets/SBM.jpg",
+      image: "/assets/SBM.jpg",
       date: "October 15, 2023",
       title: "Solid Waste Management Progress",
       excerpt: "Transforming rural sanitation through community engagement and sustainable waste management practices across Phandeshwar, Navadwip, Matigara, and Kharibari blocks."
@@ -35,9 +36,9 @@ const ArticlesSection = () => {
         </div>
         
         <div className="text-center">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md">
+          <Link to="/news" className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md transition-colors">
             View All Articles
-          </button>
+          </Link>
         </div>
       </div>
     </section>

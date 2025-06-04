@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
@@ -18,31 +20,25 @@ export default function Projects() {
       </div>
       <div className="container mx-auto px-4 mt-8">
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <div className="w-32 h-24 mb-4 bg-gray-100 flex items-center justify-center rounded">
-              {/* Empty image space */}
-            </div>
-            <h2 className="text-xl font-bold text-blue-600 mb-2">Jal Jeevan Mission (ISA)</h2>
-            <p className="text-gray-700 text-center">Implementation Support Agency providing community mobilization, village planning, IEC activities, and monitoring of safe water supply.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <div className="w-32 h-24 mb-4 bg-gray-100 flex items-center justify-center rounded">
-              <img 
-                src="/public/assets/SBM.jpg" 
-                alt="Mission Nirmal Bangla"
-                className="w-full h-full object-cover rounded"
-              />
-            </div>
-            <h2 className="text-xl font-bold text-blue-600 mb-2">Mission Nirmal Bangla</h2>
-            <p className="text-gray-700 text-center">Facilitating construction of household toilets and promoting behavioral change for cleanliness and hygiene in rural communities.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <div className="w-32 h-24 mb-4 bg-gray-100 flex items-center justify-center rounded">
-              {/* Empty image space */}
-            </div>
-            <h2 className="text-xl font-bold text-blue-600 mb-2">Solid Waste Management</h2>
-            <p className="text-gray-700 text-center">Leading awareness and implementation of waste segregation, eco-friendly disposal practices, and sustainable waste management systems in rural areas.</p>
-          </div>
+          {projects.map((project) => (
+            <Link 
+              key={project.id} 
+              to={`/projects/${project.id}`}
+              className="bg-white rounded-lg shadow p-6 flex flex-col items-center hover:shadow-lg transition-shadow"
+            >
+              <div className="w-32 h-24 mb-4 bg-gray-100 flex items-center justify-center rounded overflow-hidden">
+                {project.image && (
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <h2 className="text-xl font-bold text-blue-600 mb-2">{project.title}</h2>
+              <p className="text-gray-700 text-center">{project.shortDesc}</p>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
@@ -13,6 +13,9 @@ import News from "./pages/News";
 import JoinUs from "./pages/JoinUs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ArticlePage from "./pages/ArticlePage";
+import ProjectPage from "./pages/ProjectPage";
+import Donate from "./pages/Donate";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <div className="min-h-screen bg-white">
-        <BrowserRouter>
+        <Router>
           <NavBar />
           <div className="pt-20">
             <Routes>
@@ -32,11 +35,14 @@ const App = () => (
               <Route path="/news" element={<News />} />
               <Route path="/join" element={<JoinUs />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/articles/:id" element={<ArticlePage />} />
+              <Route path="/projects/:id" element={<ProjectPage />} />
+              <Route path="/donate" element={<Donate />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
           <Footer />
-        </BrowserRouter>
+        </Router>
       </div>
     </TooltipProvider>
   </QueryClientProvider>

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,16 +23,14 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
+          </div>          {/* Quick Links */}
           <div>
             <h3 className="text-white font-bold text-lg mb-4 text-center sm:text-left">Quick Links</h3>
             <ul className="flex flex-wrap justify-center sm:block gap-4 sm:gap-0 sm:space-y-2 text-sm">
-              <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="/about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="/projects" className="hover:text-white transition-colors">Projects</a></li>
-              <li><a href="/news" className="hover:text-white transition-colors">News</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/projects" className="hover:text-white transition-colors">Projects</Link></li>
+              <li><Link to="/news" className="hover:text-white transition-colors">News</Link></li>
             </ul>
           </div>
 
@@ -39,9 +38,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-4 text-center sm:text-left">Get Involved</h3>
             <ul className="flex flex-wrap justify-center sm:block gap-4 sm:gap-0 sm:space-y-2 text-sm">
-              <li><a href="/join" className="hover:text-white transition-colors">Join Us</a></li>
-              <li><a href="/donate" className="hover:text-white transition-colors">Donate</a></li>
-              <li><a href="/contact" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li><Link to="/join" className="hover:text-white transition-colors">Join Us</Link></li>
+              <li><Link to="/donate" className="hover:text-white transition-colors">Donate</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 

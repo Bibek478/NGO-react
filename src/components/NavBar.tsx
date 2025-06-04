@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Home, Info, Settings, Mail, FileText, UserPlus, Heart } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const mobileMenuItems = [
   { name: "Home", to: "/", icon: Home },
@@ -13,6 +13,7 @@ const mobileMenuItems = [
 
 const NavBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   return (
     <nav className="bg-white shadow-sm w-full fixed top-0 left-0 z-50">
       <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center h-24">
@@ -46,10 +47,13 @@ const NavBar = () => {
                           <UserPlus size={16} className="mr-2" />
                           Join us
                         </Link>
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
+                        <Link 
+                          to="/donate"
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center"
+                        >
                           <Heart size={16} className="mr-2" />
                           Donate Now
-                        </button>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -79,9 +83,12 @@ const NavBar = () => {
           <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap">
             Join us
           </Link>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap">
+          <Link 
+            to="/donate" 
+            className="bg-blue-600 hover:bg-blue-700 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap"
+          >
             Donate Now
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
