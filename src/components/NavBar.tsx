@@ -64,7 +64,7 @@ const NavBar = () => {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="flex items-center py-2">
+          <div className="flex items-center py-2 md:pt-10">
             <img
               src="/assets/NGO-logo.svg"
               alt="PSRWS Foundation Logo"

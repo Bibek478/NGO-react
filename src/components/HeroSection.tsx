@@ -30,15 +30,23 @@ const HeroSection = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative h-[85vh] md:h-screen overflow-hidden">
+    <div className="relative h-[85vh] md:h-screen w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ${
+          className={`absolute inset-0 transition-all duration-1000 ${
             index === currentSlide ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
           }`}
-          style={{ backgroundImage: `url('${slide.image}')` }}
         >
+          <div 
+            className="w-full h-full bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url('${slide.image}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              maxHeight: '100vh'
+            }}
+          ></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-black/30"></div>
         </div>
       ))}
@@ -67,7 +75,7 @@ const HeroSection = () => {
       </div>
 
       {/* Carousel Navigation Dots */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3">
+      <div className="absolute bottom-24 left-0 right-0 flex justify-center space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}

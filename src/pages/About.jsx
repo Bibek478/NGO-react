@@ -2,12 +2,13 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="pt-20 pb-8 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-semibold text-gray-800">About</h1>
-          <p className="text-gray-600 mt-2">Learn more about our mission, vision, and the team behind our work.</p>
+    <div className="bg-white min-h-screen pb-12 pt-8">
+      <div className="pt-20 pb-12 bg-blue-50">
+        <div className="container mx-auto px-4 text-center">
+          <div className="w-full h-12 mb-8 items-center justify-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-3">About</h1>
+            <p className="text-gray-500 mb-4 max-w-1xl mx-auto">Learn more about our mission, vision, and the team behind our work.</p>
+          </div>
         </div>
       </div>
 
