@@ -19,10 +19,10 @@ export default function Projects() {
         </div>
       </div>
       <div className="container mx-auto px-4 mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8">
           {projects.map((project) => (
             <Link key={project.id} to={`/projects/${project.id}`} className="bg-white rounded-lg shadow p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
-              <div className="w-32 h-12 mb-3 bg-gray-100 flex items-center justify-center rounded overflow-hidden">
+              <div className="h-48 w-full mb-3 bg-gray-100 rounded overflow-hidden">
                 {project.image && (
                   <img 
                     src={project.image} 

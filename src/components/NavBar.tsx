@@ -38,7 +38,7 @@ const NavBar = () => {
                             }`}
                           >
                             <item.icon className="mr-3 text-blue-500" size={20} />
-                            <span>{item.name}</span>
+                            <span className="font-medium text-base">{item.name}</span>
                           </Link>
                         </li>
                       ))}
@@ -65,19 +65,21 @@ const NavBar = () => {
             </Sheet>
           </div>
           <div className="flex items-center py-2 md:pt-10">
-            <img
-              src="/assets/NGO-logo.svg"
-              alt="PSRWS Foundation Logo"
-              className="w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto object-contain"
-            />
+            <Link to="/">
+              <img
+                src="/assets/NGO-logo.svg"
+                alt="PSRWS Foundation Logo"
+                className="w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] h-auto object-contain"
+              />
+            </Link>
           </div>
         </div>
-        <div className="hidden md:flex space-x-3 lg:space-x-6 text-sm lg:text-base">
-          <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Home</Link>
-          <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-medium" : "text-gray-600"}`}>About</Link>
-          <Link to="/projects" className={`hover:text-blue-600 ${location.pathname === "/projects" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Projects</Link>
-          <Link to="/news" className={`whitespace-nowrap hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-medium" : "text-gray-600"}`}>News & Publication</Link>
-          <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-medium" : "text-gray-600"}`}>Contact</Link>
+        <div className="hidden md:flex space-x-3 lg:space-x-6 text-base lg:text-lg font-medium">
+          <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Home</Link>
+          <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-bold" : "text-gray-600"}`}>About</Link>
+          <Link to="/projects" className={`hover:text-blue-600 ${location.pathname === "/projects" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Projects</Link>
+          <Link to="/news" className={`whitespace-nowrap hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-bold" : "text-gray-600"}`}>News & Publication</Link>
+          <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Contact</Link>
         </div>
         <div className="hidden md:flex space-x-2 lg:space-x-3">
           <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md flex items-center text-sm whitespace-nowrap">

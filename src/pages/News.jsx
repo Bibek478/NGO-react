@@ -15,7 +15,7 @@ export default function News() {
   return (
     <div className="bg-white min-h-screen pb-12 pt-8">
       <div className="pt-20 pb-12 bg-blue-50">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-82 text-center">
           <div className="w-full h-12 mb-8 items-center justify-center">
             <h1 className="text-4xl font-bold text-gray-800 mb-3">News & Publications</h1>
             <p className="text-gray-500 mb-4 max-w-1xl mx-auto">
@@ -42,7 +42,7 @@ export default function News() {
       <div className="container mx-auto px-4 mt-8">
         {filteredArticles.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
               {filteredArticles.map((article) => (
                 <Link key={article.id} to={`/articles/${article.id}`} className="hover:no-underline">
                   <ArticleCard
@@ -56,7 +56,7 @@ export default function News() {
             </div>
             
             {/* Add some dummy articles to fill out the page */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8">
               {[1, 2, 3].map((index) => (
                 <div key={`dummy-${index}`} className="opacity-70">
                   <ArticleCard

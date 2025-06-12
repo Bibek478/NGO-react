@@ -14,6 +14,18 @@ const ArticlesSection = () => {
       date: "October 15, 2023",
       title: "Solid Waste Management Progress",
       excerpt: "Transforming rural sanitation through community engagement and sustainable waste management practices across Phandeshwar, Navadwip, Matigara, and Kharibari blocks."
+    },
+    {
+      image: "/assets/SBM.jpg",
+      date: "October 10, 2023",
+      title: "Community Engagement in Sanitation",
+      excerpt: "Empowering communities through training and awareness programs to enhance sanitation practices and promote health in rural areas."
+    },
+    {
+      image: "/assets/SBM.jpg",
+      date: "October 5, 2023",
+      title: "Innovative Sanitation Solutions",
+      excerpt: "Implementing innovative solutions for sustainable sanitation and waste management in rural communities, ensuring a cleaner environment."
     }
   ];
 
@@ -25,13 +37,15 @@ const ArticlesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {articles.map((article, index) => (
-            <ArticleCard 
-              key={index}
-              image={article.image}
-              date={article.date}
-              title={article.title}
-              excerpt={article.excerpt}
-            />
+            <Link key={article.id} to={`/articles/${article.id}`} className="hover:no-underline">
+              <ArticleCard 
+               key={index}
+               image={article.image}
+               date={article.date}
+               title={article.title}
+               excerpt={article.excerpt}
+              />
+            </Link>
           ))}
         </div>
         

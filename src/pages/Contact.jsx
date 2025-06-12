@@ -53,10 +53,12 @@ export default function Contact() {
 
   return (
     <div className="bg-white min-h-screen pb-12 pt-8">
-      <div className="pt-24 pb-8 bg-blue-50">
+      <div className="pt-20 pb-12 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Get In Touch</h1>
-          <p className="text-gray-600 mb-4 max-w-2xl mx-auto">We'd love to hear from you! Reach out with questions, feedback, or partnership inquiries.</p>
+            <div className="w-full h-12 mb-8 items-center justify-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-2">Get In Touch</h1>
+            <p className="text-gray-600 mb-4 max-w-2xl mx-auto">We'd love to hear from you! Reach out with questions, feedback, or partnership inquiries.</p>
+          </div>
         </div>
       </div>
       
@@ -64,51 +66,65 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="grid md:grid-cols-5 gap-0">
             {/* Contact Information */}
-            <div className="md:col-span-2 bg-blue-600 text-white p-8">
-              <h2 className="font-bold text-2xl mb-6">Contact Information</h2>
-              <div className="space-y-6">
+            <div className="md:col-span-2 bg-blue-600 text-white p-6 md:p-8">
+              <h2 className="font-bold text-2xl md:text-3xl mb-6">Contact Information</h2>
+              <div className="space-y-5">
                 <div className="flex items-start">
-                  <MapPin className="mr-4 h-6 w-6 flex-shrink-0" />
-                  <p>Phansidewa, Darjeeling, West Bengal, India - 734434</p>
+                  <MapPin className="mr-3 h-6 w-6 mt-0.5 flex-shrink-0" />
+                  <p className="text-lg md:text-xl">Phansidewa, Darjeeling, West Bengal, India - 734434</p>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="mr-4 h-6 w-6 flex-shrink-0" />
-                  <div>
+                  <Phone className="mr-3 h-6 w-6 mt-0.5 flex-shrink-0" />
+                  <div className="text-lg md:text-xl">
                     <a href="tel:+919933238911" className="hover:underline block">+91 99332 38911</a>
                     <a href="tel:+919932238011" className="hover:underline">+91 99322 38011</a>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Mail className="mr-4 h-6 w-6 flex-shrink-0" />
-                  <a href="mailto:psrwsphd@gmail.com" className="hover:underline">psrwsphd@gmail.com</a>
+                  <Mail className="mr-3 h-6 w-6 mt-0.5 flex-shrink-0" />
+                  <a href="mailto:psrwsphd@gmail.com" className="hover:underline text-lg md:text-xl break-all">psrwsphd@gmail.com</a>
                 </div>
                 <div className="flex items-start">
-                  <Clock className="mr-4 h-6 w-6 flex-shrink-0" />
-                  <div>
+                  <Clock className="mr-3 h-6 w-6 mt-0.5 flex-shrink-0" />
+                  <div className="text-lg md:text-xl">
                     <p>Monday - Friday: 10:00 AM - 5:00 PM</p>
                     <p>Saturday: 10:00 AM - 2:00 PM</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-12 pt-6 border-t border-blue-500">
-                <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+              {/* Map inside Contact Information */}
+              <div className="mt-8 rounded-lg overflow-hidden h-48 shadow-sm">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57637.81862908145!2d88.31791027971613!3d26.67462941844522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5f3234890fce3%3A0xd7ceb19a2cce6f2d!2sPhansidewa%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1716988323940!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="PSRWS Location Map"
+                ></iframe>
+              </div>
+              
+              <div className="mt-8 pt-5 border-t border-blue-500">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-11 h-11 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   </a>
-                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-11 h-11 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                   </a>
-                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                  <a href="#" className="bg-blue-700 hover:bg-blue-800 w-11 h-11 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
                   </a>
                 </div>
               </div>
             </div>
             
             {/* Contact Form */}
-            <div className="md:col-span-3 p-8">
+            <div className="md:col-span-2 p-6 md:p-8 pt-20">
               <h2 className="font-bold text-2xl text-gray-800 mb-6">Send Us a Message</h2>
               {isSuccess ? (
                 <div className="bg-green-50 text-green-700 p-4 rounded-lg border border-green-200 mb-6 flex items-center">
@@ -119,7 +135,7 @@ export default function Contact() {
                 </div>
               ) : null}
               
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <form className="space-y-6 max-w-4xl mx-auto" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">Your Name</label>
@@ -128,7 +144,7 @@ export default function Contact() {
                       name="name" 
                       value={formData.name} 
                       onChange={handleChange}
-                      className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
+                      className={`w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
                       placeholder="John Doe" 
                     />
                     {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -140,7 +156,7 @@ export default function Contact() {
                       name="email" 
                       value={formData.email} 
                       onChange={handleChange}
-                      className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
+                      className={`w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
                       placeholder="john@example.com" 
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -153,7 +169,7 @@ export default function Contact() {
                     name="subject" 
                     value={formData.subject} 
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
                     placeholder="How can we help you?" 
                   />
                 </div>
@@ -163,8 +179,8 @@ export default function Contact() {
                     name="message" 
                     value={formData.message} 
                     onChange={handleChange}
-                    className={`w-full border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
-                    rows="5" 
+                    className={`w-full border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent`} 
+                    rows="4" 
                     placeholder="Please write your message here..."
                   ></textarea>
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
@@ -172,7 +188,7 @@ export default function Contact() {
                 <button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium flex items-center transition-colors disabled:opacity-70"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium flex items-center transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? (
                     <>
@@ -192,22 +208,6 @@ export default function Contact() {
               </form>
             </div>
           </div>
-        </div>
-      </div>
-      
-      {/* Google Map Embed */}
-      <div className="container mx-auto px-4 mt-8">
-        <div className="w-full h-96 bg-gray-100 rounded-lg overflow-hidden shadow-md">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57637.81862908145!2d88.31791027971613!3d26.67462941844522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5f3234890fce3%3A0xd7ceb19a2cce6f2d!2sPhansidewa%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1716988323940!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="PSRWS Location Map"
-          ></iframe>
         </div>
       </div>
     </div>
