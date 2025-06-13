@@ -37,7 +37,7 @@ const ArticlesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {articles.map((article, index) => (
-            <Link key={article.id} to={`/articles/${article.id}`} className="hover:no-underline">
+            <Link key={index} to={`/articles/${index}`} className="hover:no-underline">
               <ArticleCard 
                key={index}
                image={article.image}

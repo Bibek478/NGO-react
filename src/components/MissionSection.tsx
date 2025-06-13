@@ -9,7 +9,7 @@ const MissionSection = () => {
   return (
     <div className="bg-blue-50 py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 relative">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">
           Our Mission
           <div className="absolute h-1 w-24 bg-blue-500 bottom-0 left-1/2 transform -translate-x-1/2 mt-8"></div>
         </h2>

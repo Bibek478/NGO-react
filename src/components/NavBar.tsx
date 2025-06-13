@@ -7,7 +7,7 @@ const mobileMenuItems = [
   { name: "Home", to: "/", icon: Home },
   { name: "About", to: "/about", icon: Info },
   { name: "Projects", to: "/projects", icon: Settings },
-  { name: "News & Publication", to: "/news", icon: FileText },
+  { name: "Publication", to: "/news", icon: FileText },
   { name: "Contact", to: "/contact", icon: Mail },
 ];
 
@@ -78,7 +78,7 @@ const NavBar = () => {
           <Link to="/" className={`hover:text-blue-600 ${location.pathname === "/" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Home</Link>
           <Link to="/about" className={`hover:text-blue-600 ${location.pathname === "/about" ? "text-blue-600 font-bold" : "text-gray-600"}`}>About</Link>
           <Link to="/projects" className={`hover:text-blue-600 ${location.pathname === "/projects" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Projects</Link>
-          <Link to="/news" className={`whitespace-nowrap hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-bold" : "text-gray-600"}`}>News & Publication</Link>
+          <Link to="/news" className={`whitespace-nowrap hover:text-blue-600 ${location.pathname === "/news" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Publications</Link>
           <Link to="/contact" className={`hover:text-blue-600 ${location.pathname === "/contact" ? "text-blue-600 font-bold" : "text-gray-600"}`}>Contact</Link>
         </div>
         <div className="hidden md:flex space-x-2 lg:space-x-3">
