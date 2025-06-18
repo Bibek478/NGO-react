@@ -20,12 +20,6 @@ const ArticlesSection = () => {
       date: "October 10, 2023",
       title: "Community Engagement in Sanitation",
       excerpt: "Empowering communities through training and awareness programs to enhance sanitation practices and promote health in rural areas."
-    },
-    {
-      image: "/assets/SBM.jpg",
-      date: "October 5, 2023",
-      title: "Innovative Sanitation Solutions",
-      excerpt: "Implementing innovative solutions for sustainable sanitation and waste management in rural communities, ensuring a cleaner environment."
     }
   ];
 
@@ -35,15 +29,20 @@ const ArticlesSection = () => {
         <h2 className="text-3xl font-bold text-center mb-4">Latest Articles</h2>
         <p className="text-center text-gray-600 mb-12">Stay updated with our recent activities and insights</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {articles.map((article, index) => (
-            <Link key={index} to={`/articles/${index}`} className="hover:no-underline">
+            <Link 
+              key={index} 
+              to={`/articles/${index}`} 
+              className="hover:no-underline h-full flex"
+            >
               <ArticleCard 
                key={index}
                image={article.image}
                date={article.date}
                title={article.title}
                excerpt={article.excerpt}
+               className="flex flex-col h-full w-full"
               />
             </Link>
           ))}

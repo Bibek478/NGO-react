@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     id: "jal-jeevan-mission",
     title: "Jal Jeevan Mission (ISA)",
-    shortDesc: "Implementation Support Agency providing community mobilization, village planning, IEC activities, and monitoring of safe water supply.",
+    shortDesc: "Implementation Support Agency for Water Supply and Sanitation.",
     about: "Jal Jeevan Mission is a flagship programme of the Government of India which aims to provide safe and adequate drinking water through individual household tap connections to all households in rural India by 2024.",
     role: "As an Implementation Support Agency (ISA), PSRWS is responsible for:",
     bulletPoints: [

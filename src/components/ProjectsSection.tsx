@@ -25,12 +25,15 @@ const ProjectsSection = () => {
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Featured Projects</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto bg-gray-100 p-8 rounded-lg">
           {projects.map((project) => (
-            <div key={project.title} className="bg-white rounded-lg overflow-hidden shadow-md w-full max-w-md flex flex-col">
+            <div 
+              key={project.title} 
+              className="bg-white rounded-lg overflow-hidden shadow-md w-full max-w-md flex flex-col cursor-pointer transition-all duration-300 ease-in-out hover:shadow-xl hover:shadow-sky-200 hover:transform hover:scale-102 hover:border hover:border-sky-200"
+            >
               <div className="h-64 p-1 flex items-center justify-center bg-gray-50">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="max-h-100 max-w-full object-contain"
+                  className="max-h-100 max-w-full object-contain transition-transform duration-300 ease-in-out group-hover:scale-105"
                   onError={(e) => {
                     e.currentTarget.src = '/assets/No-img.jpg';
                   }}

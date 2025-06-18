@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu, Home, Info, Settings, Mail, FileText, UserPlus, Heart } from "lucide-react";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -14,12 +14,18 @@ const mobileMenuItems = [
 const NavBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-white shadow-sm w-full fixed top-0 left-0 z-50">
       <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center h-24">
         <div className="flex items-center">
           <div className="md:hidden mr-2">
-            <Sheet>
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
                 <button className="text-gray-600" aria-label="Open menu">
                   <Menu size={24} />
@@ -36,6 +42,7 @@ const NavBar = () => {
                             className={`flex items-center py-3 px-4 rounded hover:bg-blue-50 transition-colors text-gray-700 ${
                               location.pathname === item.to ? "text-blue-600 font-semibold" : ""
                             }`}
+                            onClick={closeMenu}
                           >
                             <item.icon className="mr-3 text-blue-500" size={20} />
                             <span className="font-medium text-base">{item.name}</span>
@@ -43,13 +50,18 @@ const NavBar = () => {
                         </li>
                       ))}
                       <li className="mt-3 flex space-x-2 px-2">
-                        <Link to="/join" className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center">
+                        <Link
+                          to="/join"
+                          className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center"
+                          onClick={closeMenu}
+                        >
                           <UserPlus size={16} className="mr-2" />
                           Join us
                         </Link>
-                        <Link 
+                        <Link
                           to="/donate"
                           className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm w-full flex justify-center items-center"
+                          onClick={closeMenu}
                         >
                           <Heart size={16} className="mr-2" />
                           Donate Now
