@@ -22,15 +22,16 @@ export default function Donate() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white min-h-screen pb-12 pt-8">
       {/* Hero Header */}
-      <div className="pt-24 pb-12 bg-gradient-to-r from-blue-700 to-blue-500 text-white">
+      <div className="pt-20 pb-12 bg-blue-50">
         <div className="container mx-auto px-4 text-center">
-          <Heart className="w-16 h-16 mx-auto mb-6 text-white/80" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Support Our Mission</h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+          <div className="w-full h-12 mb-8 items-center justify-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-3">Support Our Mission</h1>
+            <p className="text-gray-500 mb-4 max-w-1xl mx-auto">
             Your generous contribution empowers us to create lasting change and transform rural communities.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -75,7 +76,7 @@ export default function Donate() {
         </section>
         
         {/* Donation Form */}
-        <section className="max-w-3xl mx-auto mb-16 bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+        {/* <section className="max-w-3xl mx-auto mb-16 bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           <h2 className="text-2xl font-bold mb-6 text-center">Make a Donation</h2>
           
           <div className="mb-8">
@@ -145,7 +146,7 @@ export default function Donate() {
           <div className="mt-4 text-center text-sm text-gray-500">
             You will be redirected to our secure payment gateway
           </div>
-        </section>
+        </section> */}
         
         {/* Bank Transfer Details */}
         <section className="max-w-4xl mx-auto mb-16">

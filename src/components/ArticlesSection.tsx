@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 
 const ArticlesSection = () => {  
   const articles = [
-    {
-      image: "/assets/SBM.jpg",
-      date: "October 24, 2023",
-      title: "Success in Swachh Bharat Mission",
-      excerpt: "PSRWS's successful involvement in rural household toilet construction and sanitation awareness under Swachh Bharat Mission in Phandeshwar Block."
-    },
-    {
-      image: "/assets/SBM.jpg",
-      date: "October 15, 2023",
-      title: "Solid Waste Management Progress",
-      excerpt: "Transforming rural sanitation through community engagement and sustainable waste management practices across Phandeshwar, Navadwip, Matigara, and Kharibari blocks."
-    },
-    {
-      image: "/assets/SBM.jpg",
-      date: "October 10, 2023",
-      title: "Community Engagement in Sanitation",
-      excerpt: "Empowering communities through training and awareness programs to enhance sanitation practices and promote health in rural areas."
-    }
+    // {
+    //   image: "/assets/SBM.jpg",
+    //   date: "October 24, 2023",
+    //   title: "Success in Swachh Bharat Mission",
+    //   excerpt: "PSRWS's successful involvement in rural household toilet construction and sanitation awareness under Swachh Bharat Mission in Phandeshwar Block."
+    // },
+    // {
+    //   image: "/assets/SBM.jpg",
+    //   date: "October 15, 2023",
+    //   title: "Solid Waste Management Progress",
+    //   excerpt: "Transforming rural sanitation through community engagement and sustainable waste management practices across Phandeshwar, Navadwip, Matigara, and Kharibari blocks."
+    // },
+    // {
+    //   image: "/assets/SBM.jpg",
+    //   date: "October 10, 2023",
+    //   title: "Community Engagement in Sanitation",
+    //   excerpt: "Empowering communities through training and awareness programs to enhance sanitation practices and promote health in rural areas."
+    // }
   ];
 
   return (
